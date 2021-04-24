@@ -27,8 +27,9 @@ Mozilla Public License for more details.
 ### Installation
 
 #### The Easy Way
+## Click this Link or Open It in another Tab
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Linuxinet/truecaller)
+https://heroku.com/deploy?template=https://github.com/Linuxinet/truecaller
 
 #### Watch video
 
