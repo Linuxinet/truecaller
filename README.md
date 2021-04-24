@@ -28,7 +28,7 @@ Mozilla Public License for more details.
 
 #### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/agentnova/KnowhoBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Linuxinet/truecaller)
 
 #### Watch video
 
@@ -40,7 +40,7 @@ Simply clone the repository and run the main file:
 
 ```sh
 
-git clone https://github.com/kirodewal/truecaller.git
+git clone https://github.com/Linuxinet/truecaller.git
 
 cd truecaller
 
