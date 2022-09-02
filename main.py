@@ -44,7 +44,7 @@ def stats(client, message):
 def start(client, message):
     check_status = check(Chat.id)
     client.send_message(chat_id=Chat.id,
-                        text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Made With ❤️❤️ By @linuxinet",reply_markup=InlineKeyboardMarkup(
+                        text=f"`Hi` **{Message.from_user.first_name}**\n Enter the number to search... \n Made With ❤️❤️ By @linuxinet",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src")]]
        )
@@ -60,7 +60,7 @@ def echo(client, message):
     global pq
     pq = ""
     pro = client.send_message(chat_id=Chat.id, text="Searching...", reply_to_message_id=Message.id)
-    r_num = message.text
+    r_num = Message.text
     num = r_num.replace("+91", "").replace(" ", "")
     frbseyename = ""
     frbsefb = ""
