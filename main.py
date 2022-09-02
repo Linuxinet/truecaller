@@ -26,7 +26,7 @@ def newbt(client,callback_query):
 
 @app.on_message(filters.command(["about"]))
 def about(client, message):
-    client.send_message(chat_id=chat_id, reply_to_message_id=message_id,
+    client.send_message(chat_id=Chat.id, reply_to_message_id=Message.id,
                         text=f"<b>`⭕ Creator ⭕` : @linuxinett\n\n`⭕ Language ⭕ :` [Python3](https://python.org)\n\n`⭕ Library ⭕ :` [Pyrogram](https://docs.pyrogram.org/)\n\n`⭕ Server ⭕ :` [Heroku Professional](https://herokuapp.com/)</b>",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Support Group", url="t.me/HxSupport")]]))
@@ -34,7 +34,7 @@ def about(client, message):
 
 @app.on_message(filters.command(["log"]))
 def stats(client, message):
-    stat = client.send_message(chat_id=chat_id, reply_to_message_id=message_id,
+    stat = client.send_message(chat_id=Chat.id, reply_to_message_id=Message.id,
                                text="`Fetching details`")
     txt = logreturn()
     stat.edit(txt)
@@ -42,8 +42,8 @@ def stats(client, message):
 
 @app.on_message(filters.command(["start"]))
 def start(client, message):
-    check_status = check(chat_id)
-    client.send_message(chat_id=chat_id,
+    check_status = check(Chat.id)
+    client.send_message(chat_id=Chat.id,
                         text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Made With ❤️❤️ By @linuxinet",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src")]]
@@ -59,7 +59,7 @@ def echo(client, message):
         firebase.put('/stats', 'total_searches', data)
     global pq
     pq = ""
-    pro = client.send_message(chat_id=chat_id, text="Searching...", reply_to_message_id=message_id)
+    pro = client.send_message(chat_id=Chat.id, text="Searching...", reply_to_message_id=Message.id)
     r_num = message.text
     num = r_num.replace("+91", "").replace(" ", "")
     frbseyename = ""
