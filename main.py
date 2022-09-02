@@ -34,7 +34,7 @@ def about(client, message):
 
 @app.on_message(filters.command(["log"]))
 def stats(client, message):
-    stat = client.send_message(chat_id=message.chat.id, reply_to_message_id=message.Message.id,
+    stat = client.send_message(chat_id=message.chat.id, reply_to_message_id=message.id,
                                text="`Fetching details`")
     txt = logreturn()
     stat.edit(txt)
